@@ -6,29 +6,38 @@
 
 <%= form_for @person, url: {action: "create"} do |f| %>
   <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name, "Name:"%><br>
+    <%= f.text_field :name, :size=>"52" %>
   </p>
 
   <p>
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+    <%= f.label :title, "Job Title"%><br>
+    <%= f.text_area :story, :size=>"50x1" %>
+ </p>
+
+  <p>
+    <%= f.label :city, "Your City:"%><br>
+    <%= f.text_area :story, :size=>"50x1" %>
   </p>
 
   <p>
-    <%= f.label :video_url %><br>
-    <%= f.text_field :video_url %>
+    <%= f.label :image_url, "Link to an image of yourself:" %><br>
+    <%= f.text_field :image_url, :size=>"52" %>
   </p>
 
   <p>
-  <%= f.label :illness_id %><br>
-  <%= f.collection_select :illness_id, @illnesses, :id, :name %>
-
+    <%= f.label :video_url, "Link to a video of yours:"%><br>
+    <%= f.text_field :video_url, :size=>"52" %>
   </p>
 
   <p>
-    <%= f.label :story %><br>
-    <%= f.text_area :story %>
+  <%= f.label :illness_id, "What do you suffer from?"%><br>
+  <%= f.collection_select :illness_id, @illnesses, :id, :name, :size=>"52" %>
+  </p>
+
+  <p>
+    <%= f.label :story, "Share your story:"%><br>
+    <%= f.text_area :story, :size => "50x10" %>
   </p>
 
   <p>
