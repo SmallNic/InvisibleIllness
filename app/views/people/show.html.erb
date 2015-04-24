@@ -26,7 +26,7 @@
 <!-- Page Body -->
 
 <div class = "person_bio">
-  <%= image_tag(@person.image_url, height: '400', width: '400')%>
+  <%= link_to(image_tag(@person.image_url, height: '400', width: '400'), "/people/video?id=#{@person.id}" )%>
 
   <div class= "buttons">
     <% @three_people.each do |person| %>
@@ -70,40 +70,19 @@
 
 
 
-    <!-- Twitter Share Button -->
+  <!-- Twitter Share Button -->
 
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Meet the people putting a public face to #invisibleillness" data-count="none">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}(document, 'script', 'twitter-wjs');</script>
-
-
-    <!-- LinkedIn Share Button -->
-
-        <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-        <script type="IN/Share"></script>
-
-
-    <!-- Facebook Buttons -->
-
-        <div class="fb-share-button" data-href="https://salty-journey-2304.herokuapp.com/" data-layout="button"></div>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text="Meet the people putting a public face to #invisibleillness" data-count="none">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 
 
-<!--
-<h2>
-<%# other_people = @people.where.not(id: @person.id) %>
-<%# other_people.each do |person| %>
-    <%#= link_to(image_tag(person.image_url, width: '150'), person_path(person)) %>
+<!-- LinkedIn Share Button -->
 
-<%# end %>
-
-<hr>
-
-<h2> Illness Description<h2>
-<h2> About <%#= @person.illness.name %> </h2>
-<h3><%#= @person.illness.statistics %> </h3>
-<h3><%#= @person.illness.quote %> </h3>
-  <h3><%#= @person.illness.blurb %> </h3>
+  <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+  <script type="IN/Share"></script>
 
 
-<hr>
-<%#= button_to('Submit User Story', new_person_path, method: :get) %> -->
+<!-- Facebook Buttons -->
+
+  <div class="fb-share-button" data-href="https://salty-journey-2304.herokuapp.com/" data-layout="button"></div>
