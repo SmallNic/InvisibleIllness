@@ -23,7 +23,7 @@ lupus = Illness.create(
     blurb:"Lupus is a chronic inflammatory disease that occurs when your body's immune system attacks your own tissues and organs. Inflammation caused by lupus can affect many different body systems — including your joints, skin, kidneys, blood cells, brain, heart and lungs.",
     charity_url:"www.google.com")
 
-# USA Today People Seed Data
+# USA Today Highlighted Stories Seed Data
 ibd.people.create(
   name:"Carly M.",
   title:"ePatient Scholar; Program Analyst and Chronic Illness Advocate",
